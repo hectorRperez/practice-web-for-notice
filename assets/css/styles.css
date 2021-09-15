@@ -1,0 +1,227 @@
+:root {
+	--main-color: #150050;
+	--black: #000000;
+	--light-color: #3f0071;
+	--bg: #610094;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: all 0.2s ease-in-out;
+	text-decoration: none;
+	color: #fff;
+}
+
+body {
+	font-family: "Nunito", sans-serif;
+	background: var(--main-color);
+	font-size: 18px;
+	scroll-behavior: smooth;
+	text-transform: capitalize;
+}
+
+.container {
+	width: 90%;
+	margin: auto;
+}
+
+/* ------------ START NAV -------------- */
+
+.nav {
+	padding: 10px;
+	display: flex;
+	color: #fff;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 15px;
+}
+
+.menu-btn .bx-menu {
+	display: none;
+	cursor: pointer;
+	border-radius: 0.5rem;
+	color: #ffff;
+	background-color: var(--bg);
+}
+
+.nav .search {
+	font-size: 20px;
+}
+
+.nav img {
+	width: 50px;
+	height: 50px;
+}
+
+.nav .nav-items {
+	/* border-style: solid; */
+	flex: 1;
+}
+
+.nav .nav-items ul {
+	display: flex;
+	list-style: none;
+	flex: 1;
+}
+
+.nav .nav-items ul li {
+	margin: 5px;
+	cursor: pointer;
+}
+
+.nav .nav-items ul li a {
+	text-decoration: none;
+	color: #fff;
+	padding: 10px;
+}
+
+.nav .nav-items ul li a:hover {
+	border-bottom: solid 1px #fff;
+}
+
+/* ----------- END NAV -----------*/
+
+/* ----- START MEDIA QUERY FOR NAV ----- */
+
+@media (max-width: 950px) {
+	.nav {
+		padding: 10;
+	}
+
+	.nav .nav-items ul {
+		display: block;
+		top: 100px;
+		right: 60px;
+		position: absolute;
+		padding: 25px;
+		border-radius: 15px;
+		background-color: var(--bg);
+		transform: translateY(5px);
+	}
+
+	.nav .show ul {
+		transform: translateY(-470px);
+	}
+
+	.nav .nav-items ul li {
+		margin: 5px;
+		font-size: 14px;
+		padding: 10px;
+	}
+
+	.menu-btn i {
+		font-size: 35px;
+		margin: 15px;
+	}
+
+	.nav .search i {
+		font-size: 25px;
+	}
+
+	.menu-btn .bx-menu {
+		display: block;
+	}
+
+	.menu-btn .bx-menu:hover {
+		background-color: var(--light-color);
+	}
+}
+
+/* ----- END MEDIA QUERY FOR NAV ----- */
+
+/* ------ START HOME ------ -- */
+.home {
+	margin-top: 5px;
+	background: url("/assets/img/showcase2.jpg") no-repeat center center/cover;
+	height: 80vh;
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+	align-items: center;
+	padding: 15px;
+	text-align: center;
+}
+
+.home > * {
+	margin: 10px;
+}
+
+.btn-item {
+	background: var(--main-color);
+	padding: 20px;
+	border: 1px solid #fff;
+}
+
+.btn-item:hover {
+	background: var(--light-color);
+}
+
+/* ------ END HOME ------ -- */
+
+/* ----------- START CARD NOTICE ----------- */
+.card-notice {
+	margin-top: 30px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 0px;
+}
+
+.card-notice .card-item {
+	display: flex;
+	flex-direction: column;
+}
+
+.card-notice .card-item img {
+	width: 100%;
+	height: 200px;
+}
+
+.card-item h3 {
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.card-item p {
+	font-weight: 100;
+	margin: 10px 0;
+	text-align: left;
+}
+
+.btn-item-notice {
+	font-weight: bold;
+}
+
+/* ----------- END CARD NOTICE ----------- */
+
+/* ------- media query for card notice -------*/
+
+@media (max-width: 950px) {
+	.card-notice {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-column-gap: 12px;
+		grid-row-gap: 10px;
+	}
+
+	.card-notice .card-item {
+		padding: 10px;
+		margin-bottom: 15px;
+	}
+}
+
+@media (max-width: 600px) {
+	.card-notice {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(4, 1fr);
+		grid-column-gap: 12px;
+		grid-row-gap: 10px;
+	}
+}
