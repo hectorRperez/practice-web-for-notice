@@ -12,6 +12,7 @@
 	transition: all 0.2s ease-in-out;
 	text-decoration: none;
 	color: #fff;
+	list-style: none;
 }
 
 body {
@@ -173,6 +174,7 @@ body {
 .card-notice .card-item {
 	display: flex;
 	flex-direction: column;
+	cursor: pointer;
 }
 
 .card-notice .card-item img {
@@ -224,4 +226,136 @@ body {
 		grid-column-gap: 12px;
 		grid-row-gap: 10px;
 	}
+}
+
+/* ---------- SHOW CASE 1 -------------  */
+
+.show-case-1 {
+	margin: 15px 0;
+	background: url("/assets/img/tech-red.jpg") no-repeat center center/cover;
+	height: 350px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 100;
+}
+
+.show-case-1 .show-case-content {
+	width: 60%;
+}
+
+.show-case-1 .show-case-content > * {
+	margin: 15px;
+}
+
+.show-case-1 .show-case-content .btn-item {
+	width: 150px;
+}
+
+/* ---------- SHOW CASE media query -------------  */
+
+@media (max-width: 950px) {
+	.show-case-1 .show-case-content {
+		width: 80%;
+	}
+}
+
+@media (max-width: 400px) {
+	.show-case-1 .show-case-content {
+		font-size: 15px;
+	}
+}
+
+/* ---------- SHOW CASE 2 -------------  */
+
+.show-case-2 {
+	margin: 15px 0;
+	background: url("/assets/img/image-five.jpg") no-repeat center center/cover;
+	height: 350px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 100;
+}
+
+.show-case-2 .show-case-content {
+	width: 60%;
+}
+
+.show-case-2 .show-case-content > * {
+	margin: 15px;
+}
+
+.show-case-2 .show-case-content .btn-item {
+	width: 150px;
+}
+
+@media (max-width: 950px) {
+	.show-case-2 .show-case-content {
+		width: 80%;
+	}
+}
+
+@media (max-width: 400px) {
+	.show-case-2 .show-case-content {
+		font-size: 15px;
+	}
+}
+
+/* ------ START SOCIAL MEDIA ------*/
+.social-media {
+	height: 200px;
+	display: flex;
+}
+
+.social-media .social-media-content {
+	margin: auto;
+	padding: 20px;
+}
+
+.social-media .social-media-content h3 {
+	font-size: 25px;
+}
+
+.social-media .social-media-content .social-media-container {
+	font-size: 45px;
+	text-align: center;
+}
+
+/* ----------- Footer -----------*/
+footer {
+	height: 100%;
+	display: flex;
+	background: var(--light-color);
+	flex-direction: row;
+	width: 100%;
+	flex-wrap: wrap;
+}
+
+/* footer p {
+	text-align: center;
+	justify-content: center;
+} */
+
+footer .col {
+	flex: 1;
+	width: 65%;
+	margin: 35px auto;
+	text-align: center;
+}
+
+footer .col ul {
+	text-align: center;
+	margin: 25px;
+}
+
+footer .col ul li {
+	margin: 10px;
+}
+
+footer p {
+	width: 100%;
+	flex: 100%;
+	text-align: center;
+	padding: 25px;
 }
